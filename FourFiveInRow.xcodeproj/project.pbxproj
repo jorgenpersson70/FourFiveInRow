@@ -7,23 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA48392D276BCB3B0078CF24 /* MyCollectionViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48392C276BCB3B0078CF24 /* MyCollectionViewCell3.swift */; };
 		FA91530327634C7D0095F678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91530227634C7D0095F678 /* AppDelegate.swift */; };
 		FA91530527634C7D0095F678 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91530427634C7D0095F678 /* SceneDelegate.swift */; };
-		FA91530727634C7D0095F678 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91530627634C7D0095F678 /* ViewController.swift */; };
-		FA91530A27634C7D0095F678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA91530827634C7D0095F678 /* Main.storyboard */; };
-		FA91530C27634C7E0095F678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA91530B27634C7E0095F678 /* Assets.xcassets */; };
 		FA91530F27634C7E0095F678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA91530D27634C7E0095F678 /* LaunchScreen.storyboard */; };
+		FA91531727634D670095F678 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91531627634D670095F678 /* ViewController.swift */; };
+		FA91531927634D820095F678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA91531827634D820095F678 /* Main.storyboard */; };
+		FA91531B27634DA70095F678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA91531A27634DA70095F678 /* Assets.xcassets */; };
+		FA91531E27634DBF0095F678 /* newTryCollView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA91531C27634DBF0095F678 /* newTryCollView.xcdatamodeld */; };
+		FA91532027634DC90095F678 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91531F27634DC90095F678 /* MyCollectionViewCell.swift */; };
+		FA915322276372510095F678 /* sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA915321276372510095F678 /* sound.swift */; };
+		FA915324276376BA0095F678 /* grönfyra.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA915323276376BA0095F678 /* grönfyra.mp3 */; };
+		FA915326276376DD0095F678 /* grönfem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA915325276376DD0095F678 /* grönfem.mp3 */; };
+		FA915328276376EA0095F678 /* rödfem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA915327276376EA0095F678 /* rödfem.mp3 */; };
+		FA91532A276376F70095F678 /* rödfyra.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA915329276376F70095F678 /* rödfyra.mp3 */; };
+		FA91532C27639A6D0095F678 /* VCLargerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91532B27639A6D0095F678 /* VCLargerScreen.swift */; };
+		FA91533027639EEA0095F678 /* MyCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91532F27639EEA0095F678 /* MyCollectionViewCell2.swift */; };
+		FA9153322763C38D0095F678 /* VCFirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9153312763C38D0095F678 /* VCFirstScreen.swift */; };
+		FA9153362766399D0095F678 /* grönfem1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA9153352766399D0095F678 /* grönfem1.mp3 */; };
+		FA915338276639A20095F678 /* grönfyra1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA915337276639A20095F678 /* grönfyra1.mp3 */; };
+		FA91533A276639A80095F678 /* rödfem1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA915339276639A80095F678 /* rödfem1.mp3 */; };
+		FA91533C276639AD0095F678 /* rödfyra1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA91533B276639AD0095F678 /* rödfyra1.mp3 */; };
+		FAAB29172768E9E0004A84BF /* VCReallySmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB29162768E9E0004A84BF /* VCReallySmall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA48392C276BCB3B0078CF24 /* MyCollectionViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell3.swift; sourceTree = "<group>"; };
 		FA9152FF27634C7D0095F678 /* FourFiveInRow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourFiveInRow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA91530227634C7D0095F678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA91530427634C7D0095F678 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA91530627634C7D0095F678 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FA91530927634C7D0095F678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FA91530B27634C7E0095F678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA91530E27634C7E0095F678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA91531027634C7E0095F678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA91531627634D670095F678 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA91531827634D820095F678 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FA91531A27634DA70095F678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA91531D27634DBF0095F678 /* newTryCollView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = newTryCollView.xcdatamodel; sourceTree = "<group>"; };
+		FA91531F27634DC90095F678 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA915321276372510095F678 /* sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sound.swift; sourceTree = "<group>"; };
+		FA915323276376BA0095F678 /* grönfyra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "grönfyra.mp3"; path = "Ljud/grönfyra.mp3"; sourceTree = SOURCE_ROOT; };
+		FA915325276376DD0095F678 /* grönfem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "grönfem.mp3"; path = "Ljud/grönfem.mp3"; sourceTree = SOURCE_ROOT; };
+		FA915327276376EA0095F678 /* rödfem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "rödfem.mp3"; path = "Ljud/rödfem.mp3"; sourceTree = SOURCE_ROOT; };
+		FA915329276376F70095F678 /* rödfyra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "rödfyra.mp3"; path = "Ljud/rödfyra.mp3"; sourceTree = SOURCE_ROOT; };
+		FA91532B27639A6D0095F678 /* VCLargerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLargerScreen.swift; sourceTree = "<group>"; };
+		FA91532F27639EEA0095F678 /* MyCollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell2.swift; sourceTree = "<group>"; };
+		FA9153312763C38D0095F678 /* VCFirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFirstScreen.swift; sourceTree = "<group>"; };
+		FA9153352766399D0095F678 /* grönfem1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "grönfem1.mp3"; path = "Ljud/grönfem1.mp3"; sourceTree = SOURCE_ROOT; };
+		FA915337276639A20095F678 /* grönfyra1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "grönfyra1.mp3"; path = "Ljud/grönfyra1.mp3"; sourceTree = SOURCE_ROOT; };
+		FA915339276639A80095F678 /* rödfem1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "rödfem1.mp3"; path = "Ljud/rödfem1.mp3"; sourceTree = SOURCE_ROOT; };
+		FA91533B276639AD0095F678 /* rödfyra1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "rödfyra1.mp3"; path = "Ljud/rödfyra1.mp3"; sourceTree = SOURCE_ROOT; };
+		FAAB29162768E9E0004A84BF /* VCReallySmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCReallySmall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +88,29 @@
 		FA91530127634C7D0095F678 /* FourFiveInRow */ = {
 			isa = PBXGroup;
 			children = (
+				FA91533B276639AD0095F678 /* rödfyra1.mp3 */,
+				FA915339276639A80095F678 /* rödfem1.mp3 */,
+				FA915337276639A20095F678 /* grönfyra1.mp3 */,
+				FA9153352766399D0095F678 /* grönfem1.mp3 */,
+				FA915323276376BA0095F678 /* grönfyra.mp3 */,
+				FA915325276376DD0095F678 /* grönfem.mp3 */,
+				FA915327276376EA0095F678 /* rödfem.mp3 */,
+				FA915329276376F70095F678 /* rödfyra.mp3 */,
 				FA91530227634C7D0095F678 /* AppDelegate.swift */,
 				FA91530427634C7D0095F678 /* SceneDelegate.swift */,
-				FA91530627634C7D0095F678 /* ViewController.swift */,
-				FA91530827634C7D0095F678 /* Main.storyboard */,
-				FA91530B27634C7E0095F678 /* Assets.xcassets */,
+				FA91531627634D670095F678 /* ViewController.swift */,
+				FA91531827634D820095F678 /* Main.storyboard */,
+				FA91531A27634DA70095F678 /* Assets.xcassets */,
 				FA91530D27634C7E0095F678 /* LaunchScreen.storyboard */,
 				FA91531027634C7E0095F678 /* Info.plist */,
+				FA91531C27634DBF0095F678 /* newTryCollView.xcdatamodeld */,
+				FA91531F27634DC90095F678 /* MyCollectionViewCell.swift */,
+				FA91532F27639EEA0095F678 /* MyCollectionViewCell2.swift */,
+				FA48392C276BCB3B0078CF24 /* MyCollectionViewCell3.swift */,
+				FA915321276372510095F678 /* sound.swift */,
+				FA91532B27639A6D0095F678 /* VCLargerScreen.swift */,
+				FA9153312763C38D0095F678 /* VCFirstScreen.swift */,
+				FAAB29162768E9E0004A84BF /* VCReallySmall.swift */,
 			);
 			path = FourFiveInRow;
 			sourceTree = "<group>";
@@ -125,9 +173,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA91531927634D820095F678 /* Main.storyboard in Resources */,
+				FA91531B27634DA70095F678 /* Assets.xcassets in Resources */,
+				FA91533A276639A80095F678 /* rödfem1.mp3 in Resources */,
+				FA9153362766399D0095F678 /* grönfem1.mp3 in Resources */,
+				FA915338276639A20095F678 /* grönfyra1.mp3 in Resources */,
+				FA915328276376EA0095F678 /* rödfem.mp3 in Resources */,
+				FA915326276376DD0095F678 /* grönfem.mp3 in Resources */,
+				FA91532A276376F70095F678 /* rödfyra.mp3 in Resources */,
+				FA91533C276639AD0095F678 /* rödfyra1.mp3 in Resources */,
 				FA91530F27634C7E0095F678 /* LaunchScreen.storyboard in Resources */,
-				FA91530C27634C7E0095F678 /* Assets.xcassets in Resources */,
-				FA91530A27634C7D0095F678 /* Main.storyboard in Resources */,
+				FA915324276376BA0095F678 /* grönfyra.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +194,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA91530727634C7D0095F678 /* ViewController.swift in Sources */,
+				FA91531727634D670095F678 /* ViewController.swift in Sources */,
+				FA915322276372510095F678 /* sound.swift in Sources */,
+				FA91532027634DC90095F678 /* MyCollectionViewCell.swift in Sources */,
+				FA91532C27639A6D0095F678 /* VCLargerScreen.swift in Sources */,
+				FA91531E27634DBF0095F678 /* newTryCollView.xcdatamodeld in Sources */,
+				FAAB29172768E9E0004A84BF /* VCReallySmall.swift in Sources */,
+				FA9153322763C38D0095F678 /* VCFirstScreen.swift in Sources */,
+				FA48392D276BCB3B0078CF24 /* MyCollectionViewCell3.swift in Sources */,
+				FA91533027639EEA0095F678 /* MyCollectionViewCell2.swift in Sources */,
 				FA91530327634C7D0095F678 /* AppDelegate.swift in Sources */,
 				FA91530527634C7D0095F678 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +211,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FA91530827634C7D0095F678 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA91530927634C7D0095F678 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FA91530D27634C7E0095F678 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,20 +344,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 202112180956;
 				DEVELOPMENT_TEAM = U77KX73954;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FourFiveInRow/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fyra/Fem I Rad";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfacePortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jorgen-raby.FourFiveInRow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -316,20 +375,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 202112180956;
 				DEVELOPMENT_TEAM = U77KX73954;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FourFiveInRow/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fyra/Fem I Rad";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfacePortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jorgen-raby.FourFiveInRow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -360,6 +422,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA91531C27634DBF0095F678 /* newTryCollView.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA91531D27634DBF0095F678 /* newTryCollView.xcdatamodel */,
+			);
+			currentVersion = FA91531D27634DBF0095F678 /* newTryCollView.xcdatamodel */;
+			path = newTryCollView.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA9152F727634C7D0095F678 /* Project object */;
 }

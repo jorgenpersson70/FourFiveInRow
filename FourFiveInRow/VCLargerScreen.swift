@@ -1,32 +1,26 @@
 //
-//  ViewController.swift
+//  VCLargerScreen.swift
+//  FourFiveInRow
 //
-//  Created by jörgen persson on 2021-11-21.
+//  Created by jörgen persson on 2021-12-10.
 //
-
 
 import UIKit
 
-var arrayOfRows = [[Int]]()
-var arrayOfColumns = [[Int]]()
-var player : Int = 1
-var chatTextRecieved = ""
-
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate, UICollectionViewDelegateFlowLayout {
+class VCLargerScreen: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var whosTurnText: UILabel!
+    @IBOutlet weak var myTableViewLarge: UICollectionView!
+    @IBOutlet weak var TurnShowColorLarge: UILabel!
+    @IBOutlet weak var andTheWinnerIsLarge: UILabel!
+    @IBOutlet weak var theWinningColorLarge: UILabel!
+    @IBOutlet weak var fourInRowButtonTextLarge: UIButton!
+    @IBOutlet weak var fiveInRowButtonTextLarge: UIButton!
+    @IBOutlet weak var putAnywereLarge: UIButton!
+    @IBOutlet weak var putFromBottomLarge: UIButton!
+    @IBOutlet weak var beginAgainButtonLarge: UIButton!
     
-    @IBOutlet weak var myTableView: UICollectionView!
-    @IBOutlet weak var TurnShowColor: UILabel!
-    @IBOutlet weak var andTheWinnerIs: UILabel!
-    @IBOutlet weak var theWinningColor: UILabel!
-    @IBOutlet weak var fourInRowButtonText: UIButton!
-    @IBOutlet weak var fiveInRowButtonText: UIButton!
-    @IBOutlet weak var putAnywere: UIButton!
-    @IBOutlet weak var putFromBottom: UIButton!
-    @IBOutlet weak var beginAgainButton: UIButton!
-    
-    let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
+    let reuseIdentifier = "Cell2" // also enter this string as the cell identifier in the storyboard
 
     var row0 : [Int] = Array(repeating: 0, count: 17)
 
@@ -53,38 +47,57 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var column8Temp = Array(repeating: 0, count: 9)
     var checkForNumbers = 4
     var putAnywereFlag = false
+    
     var blockRead = false
+    var timer = Timer()
+    
     var height = 0.0
     var width = 0.0
+    
     let edge    : CGFloat = 10.0
     let spacing : CGFloat = 10.0
+    var TurnOnAgain = false
     
  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wood1.png")!)
- 
-        TurnShowColor.backgroundColor = .green
-        andTheWinnerIs.backgroundColor = .clear
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wood2.png")!)
+       
+        TurnShowColorLarge.backgroundColor = .green
+        andTheWinnerIsLarge.backgroundColor = .clear
         player = 1
         
-        fourInRowButtonText.backgroundColor = .systemPurple
-        fiveInRowButtonText.backgroundColor = UIColor(named: "FourFiveButtonLight")
-        putFromBottom.backgroundColor = .systemPurple
-        putAnywere.backgroundColor = UIColor(named: "FourFiveButtonLight")
-        beginAgainButton.backgroundColor = .systemPurple
+        fourInRowButtonTextLarge.backgroundColor = .systemPurple
+        fiveInRowButtonTextLarge.backgroundColor = UIColor(named: "FourFiveButtonLight")
+ 
+        putFromBottomLarge.backgroundColor = .systemPurple
+        putAnywereLarge.backgroundColor = UIColor(named: "FourFiveButtonLight")
+    
+        beginAgainButtonLarge.backgroundColor = .systemPurple
         
         createArrays()
-  
+        
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { _ in
+            self.updateCounting()
+        })
+ 
     }
     
-  
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let padding: CGFloat =  20
+        let collectionViewSize = collectionView.frame.size.width - padding
+        return CGSize(width: collectionViewSize/9, height: collectionViewSize/9)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 1, left: 1, bottom: 5, right: 1)
+    }
+    
     func createArrays(){
-        andTheWinnerIs.text = ""
-        theWinningColor.isEnabled = false
-        theWinningColor.alpha = 0
+        andTheWinnerIsLarge.text = ""
+        theWinningColorLarge.isEnabled = false
+        theWinningColorLarge.alpha = 0
         
         row0 = Array(repeating: 0, count: 17)
      
@@ -113,44 +126,43 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     
-    @IBAction func putAnyWere(_ sender: Any) {
-        putAnywere.backgroundColor = .systemPurple
-        putFromBottom.backgroundColor = UIColor(named: "FourFiveButtonLight")
+    @IBAction func putAnyWereLarge(_ sender: Any) {
+        putAnywereLarge.backgroundColor = .systemPurple
+        putFromBottomLarge.backgroundColor = UIColor(named: "FourFiveButtonLight")
         putAnywereFlag = true
     }
     
     
-    @IBAction func putFromBottom(_ sender: Any) {
-        putAnywere.backgroundColor = UIColor(named: "FourFiveButtonLight")
-        putFromBottom.backgroundColor = .systemPurple
+    @IBAction func putFromBottomLarge(_ sender: Any) {
+        putAnywereLarge.backgroundColor = UIColor(named: "FourFiveButtonLight")
+        putFromBottomLarge.backgroundColor = .systemPurple
         putAnywereFlag = false
     }
     
-    @IBAction func fourInRowButton(_ sender: Any) {
-        fourInRowButtonText.backgroundColor = .systemPurple
-        fiveInRowButtonText.backgroundColor = UIColor(named: "FourFiveButtonLight")
+    @IBAction func fourInRowButtonLarge(_ sender: Any) {
+        fourInRowButtonTextLarge.backgroundColor = .systemPurple
+        fiveInRowButtonTextLarge.backgroundColor = UIColor(named: "FourFiveButtonLight")
         checkForNumbers = 4
         print(player)
     }
     
-    @IBAction func fiveInRowButton(_ sender: Any) {
-        fiveInRowButtonText.backgroundColor = .systemPurple
-        fourInRowButtonText.backgroundColor = UIColor(named: "FourFiveButtonLight")
+    @IBAction func fiveInRowButtonLarge(_ sender: Any) {
+        fiveInRowButtonTextLarge.backgroundColor = .systemPurple
+        fourInRowButtonTextLarge.backgroundColor = UIColor(named: "FourFiveButtonLight")
         checkForNumbers = 5
     }
     
-    @IBAction func startNewRound(_ sender: Any) {
+    @IBAction func startNewRoundLarge(_ sender: Any) {
    
         arrayOfRows.removeAll()
         arrayOfColumns.removeAll()
         createArrays()
         
-        theWinningColor.isEnabled = false
-        theWinningColor.alpha = 0
+        theWinningColorLarge.isEnabled = false
+        theWinningColorLarge.alpha = 0
+        andTheWinnerIsLarge.backgroundColor = .clear
         
-        andTheWinnerIs.backgroundColor = .clear
-        
-        myTableView.reloadData()
+        myTableViewLarge.reloadData()
     }
     
        
@@ -163,11 +175,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
            
            // get a reference to our storyboard cell
-           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! MyCollectionViewCell
+           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! MyCollectionViewCell2
            
-           cell.myLabel.text = ""
-           
-          
+           cell.myLabelCell.text = ""
            
            let indexnumer = indexPath.row
            
@@ -202,7 +212,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                let colorEnd = UIColor(red:0.90 , green: 0.40, blue: 0.0, alpha: 0.9)
                cell.backgroundColor = .orange
           }
-           
+         
            cell.layer.borderWidth = 1
            cell.layer.cornerRadius = 8
            
@@ -212,7 +222,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
            print("You selected cell #\(indexPath.item)!")
  
-            if (theWinningColor.isEnabled){
+            if (theWinningColorLarge.isEnabled){
                 return
             }
            
@@ -260,17 +270,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                
                if (OK){
                
-                   if (TurnShowColor.backgroundColor == .green)
+                   if (TurnShowColorLarge.backgroundColor == .green)
                    {
                        cell?.backgroundColor = .green
-                       TurnShowColor.backgroundColor = .red
+                       TurnShowColorLarge.backgroundColor = .red
                        arrayOfRows[rad][column] = 1
                        arrayOfColumns[column][rad] = 1
                    }
                    else
                    {
                        cell?.backgroundColor = .red
-                       TurnShowColor.backgroundColor = .green
+                       TurnShowColorLarge.backgroundColor = .green
                        arrayOfRows[rad][column] = 2
                        arrayOfColumns[column][rad] = 2
                    }
@@ -291,6 +301,45 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
            checkDiagonal2()
        }
     
+    func updateCounting(){
+        
+        if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
+            var test = theWinningColorLarge.isEnabled
+            print("Portrait Views")
+            whosTurnText.alpha = 0
+            myTableViewLarge.alpha = 0
+            TurnShowColorLarge.alpha = 0
+            if (test){
+                TurnOnAgain = true
+                andTheWinnerIsLarge.alpha = 0
+                theWinningColorLarge.alpha = 0
+            }
+            
+            fourInRowButtonTextLarge.alpha = 0
+            fiveInRowButtonTextLarge.alpha = 0
+            putAnywereLarge.alpha = 0
+            putFromBottomLarge.alpha = 0
+            beginAgainButtonLarge.alpha = 0
+        }
+        else{
+            print("correct Views")
+            whosTurnText.alpha = 1
+            myTableViewLarge.alpha = 1
+            TurnShowColorLarge.alpha = 1
+            if (TurnOnAgain){
+                andTheWinnerIsLarge.alpha = 1
+                theWinningColorLarge.alpha = 1
+                TurnOnAgain = false
+            }
+            
+            fourInRowButtonTextLarge.alpha = 1
+            fiveInRowButtonTextLarge.alpha = 1
+            putAnywereLarge.alpha = 1
+            putFromBottomLarge.alpha = 1
+            beginAgainButtonLarge.alpha = 1
+            
+        }
+    }
     
     func removeInRow(antal:Int, rad:[Int])->[Int]{
         var rad = rad
@@ -428,7 +477,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             testDiagonal(rad: column1Temp, column: i, diagonalOneOrTwo: 1, rowOrColumnNumber: i, start : 5)
         }
     }
-    
+   
     
     func checkDiagonal2(){
         var sameColor = 0
@@ -677,7 +726,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             else{
                 playSound(fileName: "rödfyra1")
             }
-            andTheWinnerIs.text = "Vinnare är \(color). \(color) har fått fyra i rad."
+            andTheWinnerIsLarge.text = "Vinnare är \(color). \(color) har fått fyra i rad."
         }
         else{
             if (color == "Grön"){
@@ -686,18 +735,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             else{
                 playSound(fileName: "rödfem1")
             }
-            andTheWinnerIs.text = "Vinnare är \(color). \(color) har fått fem i rad."
+            andTheWinnerIsLarge.text = "Vinnare är \(color). \(color) har fått fem i rad."
         }
-        theWinningColor.isEnabled = true
-        theWinningColor.alpha = 1
-        andTheWinnerIs.backgroundColor = .systemPurple
+        theWinningColorLarge.isEnabled = true
+        theWinningColorLarge.alpha = 1
+        
+        andTheWinnerIsLarge.backgroundColor = .systemPurple
+        
         if (color == "Grön")
         {
-            theWinningColor.backgroundColor = .green
+            theWinningColorLarge.backgroundColor = .green
         }
         else
         {
-            theWinningColor.backgroundColor = .red
+            theWinningColorLarge.backgroundColor = .red
         }
     }
 }
