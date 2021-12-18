@@ -12,6 +12,7 @@ var arrayOfRows = [[Int]]()
 var arrayOfColumns = [[Int]]()
 var player : Int = 1
 var chatTextRecieved = ""
+// igen
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate, UICollectionViewDelegateFlowLayout {
     
