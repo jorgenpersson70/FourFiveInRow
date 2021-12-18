@@ -73,6 +73,9 @@ class VCFirstScreen: UIViewController {
         timer.invalidate()
     }
     
+    // jag lägger in text för att testa git
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "iphone"){
