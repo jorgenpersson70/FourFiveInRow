@@ -74,7 +74,7 @@ class VCFirstScreen: UIViewController {
     }
     
     // jag lägger in text för att testa git
-    
+    // mer text
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
