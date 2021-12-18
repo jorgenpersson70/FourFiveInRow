@@ -6,6 +6,7 @@
 
 
 import UIKit
+//hallå
 
 var arrayOfRows = [[Int]]()
 var arrayOfColumns = [[Int]]()
